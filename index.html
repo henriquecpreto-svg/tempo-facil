@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempoFácil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="tempofacil-container">
+            <img src="src/img/tempo-facil-2.png" alt="TempoFácil" class="tempofacil-logo">
+        </div>
+        <p class="descubra">Descubra o clima de qualquer cidade do mundo</p>
+    </div>
+
+    <form class="form-pesquisa" id="formularioPesquisa">
+        <div class="container-pesquisa">
+            <input type="text" id="inputCidade" class="input-pesquisa" placeholder="Digite o nome da cidade..." autocomplete="off">
+            <button type="submit" class="botao-input" id="botaoPesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </div>
+    </form>
+
+
+    <div id="erro" class="erro hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="mensagemErro"></span>
+    </div>
+
+    <div id="cartaoClima" class="cartao-clima hidden">
+        <div class="cabeca-clima">
+            <div class="localizacao">
+                <h2 id="nomeCidade"></h2>
+                <p id="nomeEstado"></p>
+            </div>
+            <div class="icone-clima-container">
+                <div id="iconeClima"></div>
+                <p class="descricao-clima" id="descricaoClima"></p>
+            </div>
+        </div>
+
+        <div class="main-temperatura">
+            <div class="valor-temperatura" id="temperatura"></div>
+            <p class="sensacao" id="sensacaoDe"></p>
+        </div>
+
+        <div class="detalhes-clima">
+            <div class="detalhe-cartao">
+                <svg class="detalhe-icone" style="color: #B8DCF5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                <div>
+                    <p class="linha-detalhe">Umidade</p>
+                    <p class="valor-detalhe" id="umidade"></p>
+                </div>
+            </div>
+
+            <div class="detalhe-cartao">
+                <svg class="detalhe-icone" style="color: #FFD43B" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+                </svg>
+                <div>
+                    <p class="linha-detalhe">Vento</p>
+                    <p class="valor-detalhe" id="velocidadeVento"></p>
+                </div>
+            </div>
+
+            <div class="detalhe-cartao">
+                <svg class="detalhe-icone" style="color: #B8DCF5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <div>
+                    <p class="linha-detalhe">Visibilidade</p>
+                    <p class="valor-detalhe" id="visibilidade"></p>
+                </div>
+            </div>
+
+            <div class="detalhe-cartao">
+                <svg class="detalhe-icone" style="color: #F5841F" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div>
+                    <p class="linha-detalhe">Pressão</p>
+                    <p class="valor-detalhe" id="pressao"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mensagemInicial" class="mensagem-inicial">
+        <p>Digite o nome de uma cidade para começar a consulta.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

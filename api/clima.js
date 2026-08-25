@@ -1,0 +1,1 @@
+export default async function handler(req, res) { const { cidade } = req.query; const API_KEY = process.env.OPENWEATHER_API_KEY; const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${API_KEY}&units=metric&lang=pt_br`; const resposta = await fetch(url); const dados = await resposta.json(); res.status(resposta.status).json(dados); }
