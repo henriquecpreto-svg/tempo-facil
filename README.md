@@ -43,8 +43,8 @@ O projeto está no ar via [Vercel](https://vercel.com), publicado diretamente a 
 2. A chave da OpenWeatherMap foi cadastrada em **Settings → Environment Variables** como `OPENWEATHER_API_KEY`.
 3. A cada novo push para a branch `main`, a Vercel refaz o deploy automaticamente.
 
-**Site publicado:** 
+**Site publicado:** https://tempo-facil.vercel.app
 
-## Henrique Carvalho
+## Autor
 
 Projeto desenvolvido para trabalho escolar.
