@@ -56,6 +56,8 @@ function PegarIconeClima(condicao) {
         }
 
         function mostrarClima(clima) {
+            mudarFundo(clima.condicao)
+
             document.getElementById('nomeCidade').textContent = clima.cidade
             document.getElementById('nomeEstado').textContent = clima.estado;
             document.getElementById('temperatura').textContent = clima.temperatura + '°C';
@@ -99,3 +101,25 @@ function PegarIconeClima(condicao) {
                 
             }
         });
+
+        function mudarFundo(condicao) {
+            document.body.classList.remove('fundo-ensolarado', 'fundo-chuvoso', 'fundo-neutro');
+
+            switch(condicao.toLowerCase()) {
+                case 'ensolarado':
+                case 'clear':
+                    documnet.body.classList.add('fundo-ensolarado');
+                    break;
+                
+                    case 'chuva':
+                    case 'rain':
+                    case 'drizzle':
+                    case 'thunderstorm':
+                        document.body.classList.add('fundo-chuvoso')
+                        break;
+
+                    default:
+                        document.body.classList.add('fundo-neutro');
+
+            }
+        }

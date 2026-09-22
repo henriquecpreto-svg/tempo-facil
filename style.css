@@ -206,3 +206,15 @@ body {
 .hidden {
     display: none;
 }
+
+body.fundo-ensolarado {
+    background-color: linear-gradient(135deg, #FFD43B 0%, #F5841F 50%, #1A2636 100%);
+}
+
+body.fundo-chuvoso {
+    background: linear-gradient(135deg, #4A6FA5 0%, #1E3A5F 50%, #0D1B2A 100%);
+}
+
+body.fundo-neutro {
+    background: linear-gradient(135deg, #1E90D4 0%, #0D6FAB 50%, #1A2636 100%);
+}
