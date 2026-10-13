@@ -108,7 +108,7 @@ function PegarIconeClima(condicao) {
             switch(condicao.toLowerCase()) {
                 case 'ensolarado':
                 case 'clear':
-                    documnet.body.classList.add('fundo-ensolarado');
+                    document.body.classList.add('fundo-ensolarado');
                     break;
                 
                     case 'chuva':
