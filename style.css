@@ -217,7 +217,7 @@ body {
 }
 
 body.fundo-ensolarado {
-    background-color: linear-gradient(135deg, #FFD43B 0%, #F5841F 50%, #1A2636 100%);
+    background: linear-gradient(135deg, #FFD43B 0%, #F5841F 50%, #1A2636 100%);
 }
 
 body.fundo-chuvoso {
