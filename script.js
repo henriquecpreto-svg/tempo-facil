@@ -1,7 +1,3 @@
-var myLandbot = new Landbot.Livechat({
-    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3534671-G7QZTM0M3IC085JY/index.json',
-  });
-  
 function PegarIconeClima(condicao) {
             const estiloIcone = 'width: 80px; height: 80px;';
 
